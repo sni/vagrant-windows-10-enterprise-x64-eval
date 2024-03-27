@@ -1,2 +1,4 @@
 .vagrant
 *.pub
+*.ps1
+*.bat
