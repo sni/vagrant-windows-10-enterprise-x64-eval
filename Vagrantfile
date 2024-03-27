@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
 
     # add our ssh key
     $lineCount = (Get-Content -Path "C:/ProgramData/ssh/administrators_authorized_keys" | Measure-Object -Line).Lines
-    if ($lineCount -eq 1 and "#{ssh_key_data}" -ne "") {
+    if ($lineCount -eq 1 -and "#{ssh_key_data}" -ne "") {
       Add-Content -Path "C:/ProgramData/ssh/administrators_authorized_keys" -Value "#{ssh_key_data}"
     }
 

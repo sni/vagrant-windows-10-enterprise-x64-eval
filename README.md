@@ -27,6 +27,11 @@ The first start might take a while...
 
 ## SSH Login
 
+Default credentials are
+
+    User:     vagrant
+    Password: vagrant
+
 Creating a `.ssh/config` like this:
 
     Host win10-enterprise-x64-eval
