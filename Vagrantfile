@@ -44,6 +44,7 @@ Vagrant.configure("2") do |config|
     # install vim
     Invoke-WebRequest -UseBasicParsing -Uri https://github.com/vim/vim-win32-installer/releases/download/v9.1.0196/gvim_9.1.0196_x86.zip -OutFile gvim_9.1.0196_x86.zip
     Expand-Archive -LiteralPath ./gvim_9.1.0196_x86.zip -DestinationPath 'C:/Program Files'
+    & 'C:\\Program Files\\vim\\vim91\\install.exe' -create-batfiles vim view
   SHELL
   config.vm.provision "shell", privileged: true, path: "./provision.ps1" if File.exist?("./provision.ps1")
 end
